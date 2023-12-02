@@ -1,10 +1,10 @@
 #include "stringat.h"
 /**
- * len - length
+ * _strlen - length
  * @s: string
  * Return: string length
  */
-int len(const char *s)
+int _strlen(const char *s)
 {
 	int cnt = 0;
 
@@ -15,18 +15,19 @@ int len(const char *s)
 	return (cnt);
 }
 /**
- * _strndup - create a copy
+ * _strdup - create a copy
  * @s: string to copy
+ * @size: bytes
  * Return: pointer to the new copied string
  */
 char *_strdup(const char *s)
 {
-	char *copy = (char*)malloc(len(s) * sizeof(char *) + 1);
+	char *copy = (char*)malloc(_strlen(s) * sizeof(char *) + 1);
 	int i = 0;
 
 	if (copy == NULL)
 		return (NULL);
-	for (; i < len(s); i++)
+	for (; i < _strlen(s); i++)
 	{
 		copy[i] = s[i];
 	}
@@ -68,12 +69,12 @@ char *_trim(const char *s)
 }
 
 /**
- * _concat - concatenate 2 strings
+ * _strcat - concatenate 2 strings
  * @first: first string
  * @second: second string
  * Return: pointer to new string
 */
-char *_concat(const char *first, const char *second)
+char *_strcat(const char *first, const char *second)
 {
 	int size1 = len(first), size2 = len(second), sizeNew, i = 0, j = 0;
 	char *new;

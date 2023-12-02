@@ -6,9 +6,9 @@
 
 
 /* stringat1.c */
-int len(const char *s);
+int _strlen(const char *s);
 char *_strdup(const char *s);
-char *_concat(const char *first, const char *second);
+char *_strcat(const char *first, const char *second);
 char *_trim(const char *s);
 
 /* printat.c */
