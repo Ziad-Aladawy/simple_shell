@@ -9,9 +9,9 @@
 int main(int argc, char **argv)
 {
 	char *prompt = "Lamma@Shell $ ";
-	size_t n = 0;
 	/* where we will process the commands*/
-	char *command = malloc(sizeof(char) * n);
+	char *command;
+	size_t n;
 
 	/* I cast argc and argv to void to avoid warnings nothing special dw */
 	(void)argc, (void)argv;
