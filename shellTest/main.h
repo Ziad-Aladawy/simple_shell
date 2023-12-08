@@ -6,6 +6,8 @@
 #include <unistd.h>
 #include <fcntl.h>
 #include <string.h>
+#include <sys/types.h>
+#include <sys/stat.h>
 
 #define BUFFER 16
 
@@ -24,6 +26,9 @@ void _putsnl(char *s);
 char *_strcpy(char *dest, char *src);
 size_t _strlen(char *s);
 int _atoi(char *s);
+
+void execmd(char **argv);
+char *get_path(char *command);
 
 
 #endif
